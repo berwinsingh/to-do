@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Flow+Circular&family=Open+Sans:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: rgb(64, 64, 64);
+    --primary-color: #3D5CD6;
+    --secondary-color: #4539ED;
+    --shadow-color: rgba(47, 47, 47, 0.497);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.flex{
+    display: flex;
+    align-content: center;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--primary-text-color);
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+p, .default-family, li{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.seperator{
+    color: var(--primary-color);
+    font-family: 'Flow Circular', cursive;
+    margin-block: 5px;
+}
+
+/* Background Placeholder */
+.parent-div{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    position: fixed;
+    background-color: whitesmoke;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    padding-block: 40px;
+    padding-inline: 30px;
+    box-shadow: 1px 0px 10px var(--shadow-color);
+}
+
+.add-task{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+.add-task:hover{
+    background-color: var(--secondary-color);
+}
+
+.plus{
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+}
+
+.bottom-banner{
+    position: fixed;
+    top: 81%;
+    gap: 35px;
+}
+
+.task-name{
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    width: 350px;
+    box-shadow: 0px 0px 3px var(--shadow-color);
+    padding-inline-start: 10px;
+    font-size: 15px;
+}
+/* Tasks */
+
+.all-tasks{
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 500px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.tasks p{
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 13px;   
+}
+
+/* Responsive Designs */
+@media (min-width:968px) and (max-width: 1230px) {
+    .bottom-banner{
+        top: 82%;
+    }
+}
+
+/* Designing the List Element */
+li{
+    list-style: none;
+    margin-top: 10px;
+    padding-inline: 40px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    font-size: 16px;
+}
+
+li::before{
+    content: '';
+    position: absolute;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    left: 10px;
+}
+
+.checked{
+    text-decoration: line-through;
+    color: var(--shadow-color);
+}
+
+.checked::before{
+    background-image: url(./images/checked.png);
+
+}
+
+ul{
+    margin-top: 10px;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 20px;
+}
+
+ul li span:hover{
+    background-color: aliceblue;
+    border-radius: 50%;
+}

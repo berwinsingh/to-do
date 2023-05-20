@@ -85,7 +85,7 @@ p, .default-family, li{
 }
 
 .bottom-banner{
-    position: relative;
+    position: fixed;
     top: 81%;
     gap: 35px;
 }
@@ -117,7 +117,7 @@ p, .default-family, li{
 /* Responsive Designs */
 @media (min-width:300px) and (min-width: 480px) {
     .bottom-banner{
-        top: 72%;
+        top: 63%;
     }
 }
 

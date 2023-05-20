@@ -115,9 +115,9 @@ p, .default-family, li{
 }
 
 /* Responsive Designs */
-@media (min-width:1000px) and (min-width: 1230px) {
+@media (min-width:300px) and (min-width: 480px) {
     .bottom-banner{
-        top: 82%;
+        top: 72%;
     }
 }
 

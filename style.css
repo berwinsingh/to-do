@@ -115,11 +115,17 @@ p, .default-family, li{
 }
 
 /* Responsive Designs */
-@media (min-width:300px) and (max-width: 480px) {
+@media (min-width:380px) and (max-width:500px) {
     .bottom-banner{
-        top: 63%;
+        top: 70%;
     }
 }
+
+/* @media (min-width:370px) and (max-width: 480px){
+    .bottom-banner{
+        top: 73%;
+    }
+} */
 
 /* Designing the List Element */
 li{
